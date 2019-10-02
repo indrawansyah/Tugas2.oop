@@ -4,20 +4,17 @@ class Produk {
 	public  $judul,
 			$penulis,
 			$penerbit,
-			$harga, 
+			$harga,
 			$jmlHalaman,
-			$waktumain,
-			$tipe;
+			$waktumain;
 
-
-		public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $jmlHalaman = 0, $waktumain = 0, $tipe ="Game" ) {
+		public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $jmlHalaman = 0, $waktumain = 0 ) {
 			$this->judul = $judul;
 			$this->penulis = $penulis;
 			$this->penerbit = $penerbit;
 			$this->harga = $harga;
 			$this->jmlHalaman = $jmlHalaman;
 			$this->waktumain = $waktumain;
-			$this->tipe = $tipe;
 	
 	}
 
@@ -40,6 +37,13 @@ class Komik extends Produk {
 		$str = "Komik : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->jmlHalaman} Halaman. ";	
 		return $str;
 	}
+}
+
+class Game extends Produk {
+	public function getInfoProduk(){
+		$str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktumain} Jam. ";	
+		return $str;
+	}
 
 }
 
@@ -53,8 +57,8 @@ class CetakInfoProduk {
 
 
 
-$produk1 = new Komik("Naruto", "Masashi Kishimoto","Shonen Jump", 30000, 100, 0, "Komik", "Game");
-$produk2 = new Produk("Uncharted", "Neil Druckman", "Sony Computer",250000, 0, 50);
+$produk1 = new Komik("Naruto", "Masashi Kishimoto","Shonen Jump", 30000, 100, 0);
+$produk2 = new Game("Uncharted", "Neil Druckman", "Sony Computer",250000, 0, 50);
 
 
 echo $produk1->getInfoProduk();
