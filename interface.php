@@ -136,14 +136,14 @@ class CetakInfoProduk {
 
 
 
-// $produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0);
-// $produk2 = new Game("Uncharted", "Neil Druckman", "Sony Computer", 250000, 50);
+$produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0);
+$produk2 = new Game("Uncharted", "Neil Druckman", "Sony Computer", 250000, 50);
  
-// $CetakProduk = new CetakInfoProduk();
-// $CetakProduk->tambahProduk($produk1);
-// $CetakProduk->tambahProduk($produk2);
-// echo $CetakProduk->cetak();
+$CetakProduk = new CetakInfoProduk();
+$CetakProduk->tambahProduk($produk1);
+$CetakProduk->tambahProduk($produk2);
+echo $CetakProduk->cetak();
 
-$tes = new Produk();
+//$tes = new Produk();
 
 
