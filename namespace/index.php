@@ -12,4 +12,6 @@ require_once "App/init.php";
 
 // echo "<hr>";
 
-new App\Produk\User ();
+new App\Service\User ();
+echo "<br>";
+new App\Produk\User();
