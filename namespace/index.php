@@ -12,4 +12,4 @@ require_once "App/init.php";
 
 // echo "<hr>";
 
-new User ();
+new App\Produk\User ();
